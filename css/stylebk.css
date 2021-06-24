@@ -1,0 +1,694 @@
+/* COLORES
+Rosa: #EE988F
+Celeste: #9FCDBE
+Amarillo: #F9D953
+Verde: #A0C672        */
+
+
+
+/* Voy a usar una única familia tipográfica */
+* {
+    font-family: 'Quicksand', sans-serif;
+    /* font-weight: normal; */
+}
+
+
+/* Voy a usar rem como unidad de medida relativa. Establezco el tamaño de letra del html en 62.5% */
+html {
+    font-size: 62.5%;
+}
+
+
+/* Reseteo el body estableciendo algunas medidas en 0 y el tamaño de letra básico */
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+
+/* Le saco los bullets a la lista */
+nav ul li{
+    list-style: none;
+}
+
+
+/* A los enlaces de la barra de navegación le saco el subrayado y le asigno color y negrita */
+nav ul li a{
+    text-decoration: none;
+    color: #EE988F;
+    font-weight: bold;
+}
+
+/*Quiero que la barra de navegacón quede siempre visible pegada al borde superior de la página. Divido el menú en dos columnas usando display:grid */
+.menuSticky {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 1fr 2fr ;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    /* No creo que un degradado quede bien con la estética del sitio, por eso puse un degradado de blanco a blanco para que puedan evaluar como uso la herramienta */
+    background-image: linear-gradient(to bottom, white, white);
+    padding: 15px 20%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    z-index: 15;
+}
+
+
+/*Ajusto la altura del logo en el header */
+.logoHeader {
+    height: 40px;
+}
+
+
+/* Le asigno display:grid a la ul del menuSticky para divirlo en 4 columnas de ancho automático */
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 5px;
+    grid-gap: 15px;
+}
+
+
+/* Centro el texto de cada botón de la barra de navegación */
+.navbar li {
+    text-align: center;
+}
+
+
+/* Cómo la navbar es siempre la misma, el enlace a la página actual aparece en otro color */
+.seleccionado {
+    color: #9FCDBE;
+}
+
+
+/* Los botones de la navbar cambian de color cuando le pasamos el mouse por encima */
+nav ul li:hover{
+    background-color: #F9D953;
+    border-radius: 5px;
+}
+
+
+nav ul li a:hover{
+    color: white;
+}
+
+
+
+
+
+
+/* Submenu emergente */
+.contenedorSubmenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0;
+    width: 105px;
+}
+
+.contenedorSubmenu:hover .submenu{
+    display: block;
+}
+
+.submenu li {
+    padding: 0px 5px;
+    margin: 3px;
+}
+
+/* Fin submenu emergente */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Le pongo un png semi transparente con un pattern para el fondo del body */
+body {
+    background-image: url("../img/fondo.png");
+}
+
+
+/* Le puse margen al main para que tenga un poco más de forma de página web */
+main {
+    padding: 30px 20% 50px 20%;
+}
+
+
+/* Le pongo sombra a todas las imágenes dentro del main */
+main img {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+}
+
+
+
+
+/* Cada imagen tiene su animación con los tiempos intercalados para que el mono aparezca desde distintas posiciones de la página. Tiene un position:fixed para poder ubicarlo en la parte de la página que corresponda y con translate se mueve para que aparezca. Con los diferentes valores de z-index hago que aparezca abajo del menu-sticky o arriba del footer */
+
+.curioso {
+    animation-name: jorge;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    top: -130px;
+    right: 10%;
+    z-index: -1;
+}
+
+.curioso2 {
+    animation-name: jorge2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    left: -160px;
+    bottom: 20%;
+    z-index: -1;
+}
+
+.curioso3 {
+    animation-name: jorge3;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    bottom: -170px;
+    left: 25%;
+    z-index: 10;
+}
+
+.curioso4 {
+    animation-name: jorge4;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    right: -160px;
+    bottom: 50%;
+    z-index: -1;
+}
+
+@keyframes jorge {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    15% {
+        transform: translate(0, 0) ;
+    } 
+
+    18% {
+        transform: translate(0,170px)
+    }
+
+    22% {
+        transform: translate(0, 170px) ;
+    } 
+
+    25% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes jorge2 {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    40% {
+        transform: translate(0, 0) ;
+    } 
+
+    44% {
+        transform: translate(140px,0)
+    }
+
+    48% {
+        transform: translate(140px, 0) ;
+    } 
+
+    50% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes jorge3 {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    90% {
+        transform: translate(0, 0) ;
+    } 
+
+    93% {
+        transform: translate(0,-160px)
+    }
+
+    97% {
+        transform: translate(0, -160px) ;
+    } 
+
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes jorge4 {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    65% {
+        transform: translate(0, 0) ;
+    } 
+
+    68% {
+        transform: translate(-140px,0)
+    }
+
+    72% {
+        transform: translate(-140px, 0) ;
+    } 
+
+    75% {
+        transform: translate(0,0);
+    }
+}
+
+
+.mono img{
+    box-shadow: 0 10px 20px rgba(0,0,0,0), 0 6px 6px rgba(0,0,0,0);
+}
+
+
+
+/* Formato de H2 */
+h2 {
+    color: #EE988F;
+    font-weight: bold;
+    font-size: 3.2rem;
+}
+
+
+/* Para que el video ocupe todo el ancho de la pantalla y que se ajuste la altura automaticamente. Uso 100vh para la altura, de esa manera se ajusta a la altura de la pantalla */
+.portada {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Propiedades del video que se ajustan a su caja .portada */
+.videoPortada {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* para que el logo y la imagen queden arriba del video con posicion absoluta, que se separe del lateral izquiedo y tenga un fondo negro semi transparente con bordes derechos redondeados */
+.content {
+    position: relative;
+    top: -450px;
+    width: 40%;
+    padding: 25px 25px 30px 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 0;
+}
+
+.fondoNegroTransparente {
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.content img {
+    padding-left: 25%;
+}
+
+
+/* achico un poco el logo que va sobre el video */
+.content img {
+    width: 35%;
+    height: 35%;
+}
+
+
+/* Redondeo todas las esquinas de todas las imagenes del sitio y ajusto el ancho al 100% */
+.contenido img {
+    border-radius: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+/* Formato H2 - margin + padding */
+.contenido h2 {
+    margin: 20px 0 10px 0;
+    padding: 0 30px;
+}
+
+
+/* Formato H3 - margin + padding */
+.contenido h3 {
+    font-weight: bold;
+    padding:  0 30px;
+}
+
+
+/* Formato H4 - margin + padding */
+.contenido h4 {
+    font-weight: bold;
+    padding: 0 30px 10px 30px;
+}
+
+
+.contenido p {
+    margin: 0 0 10px 0;
+    padding: 0 30px;
+}
+
+
+/* Formato OL + estilo de lista */
+.contenido ol {
+    margin: 0 0 50px 0;
+    list-style-type: symbols();
+}
+
+
+/* En varias partes del sitio hay citas que comparten fuente, color, tamaño, están alineadas al centro y tienen margen arriba y abajo */
+.quotes {
+    color: #9FCDBE;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* En la pagina de presentación se crean dos recuadros de color donde aparece la info de cada socia. */
+.presentation {
+    padding: 40px 70px 10px 70px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Divido internamente cada sección de presentación en dos columnas usando display:grid */
+.presentationColumnas {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentationColumnas img {
+    width: 100%;
+}
+
+.presentationColumnas div {
+    padding: 5%;
+}
+
+/* Cada ficha tiene un color de fondo particular*/ 
+.presentation1 {
+    background-color: #F9D953;
+    background-image: url("../img/fondoClaro.png");
+}
+
+
+/* Cada ficha tiene un color de fondo particular */
+.presentation2 {
+    background-color: #A0C672;
+    background-image: url("../img/fondoClaro.png");
+}
+
+
+/* Redondeo bordes imagenes presentación y ajusto el ancho */
+.presentation img {
+    border-radius: 50%;
+    width: 100x;
+}
+
+/* Las citas de estos bloques tienen una clase individual para cambiarles el color y que contrasten bien con el fondo*/
+.presentation1 .aboutQuote {
+    color: #EE988F;
+    text-align: right;
+}
+
+
+.presentation2 .aboutQuote {
+    color: #F9D953;
+    text-align: right;
+}
+
+
+/* Divido las novedades en 3 columnas usando flexbox*/
+.contenedorNovedades {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+/* Redondeo bordes de imagenes y ajusto al 100% del ancho de la caja padre. Le doy un borde de color diferente a cada novedad */
+.contenedorNovedades img {
+    border-radius: 30px;
+    width: 100%;
+}
+
+.novedad {
+    flex-basis: 230px;
+    margin: 0 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    grid-gap: 10px;
+    margin: 0;
+}
+
+
+/* Las imagenes con las novedades crecen al pasarle el mouse por arriba */
+.novedad img {
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.novedad img:hover {
+    transform: scale(1.02);
+}
+
+
+/* Cada cuadro de noevdad tiene un borde de distito color siguiendo la paleta que armamos junto con la identidad */
+.novedad1 img{
+    border: 6px solid #EE988F;
+}
+
+.novedad2 img{
+    border: 6px solid #A0C672;
+}
+
+.novedad3 img{
+    border: 6px solid #F9D953;
+}
+
+/* Formato de elementos de columnas novedades */
+.columnasNovedades div h3 {
+    padding: 0 30px;
+}
+
+
+.columnasNovedades div p {
+    padding: 0 30px;
+}
+
+
+/* El icono de whatsapp que nos lleva a la página para mandar un msj tiene una posición fija en la esquina inferior derecha de la pantalla */
+.whatsappIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+}
+
+
+/* Ajusto tamaño del icono y le saco la sombra que le asigné a todas las imágenes*/
+.whatsappIcon img {
+    width: 35px;
+    height: 35px;
+    box-shadow: none;
+    transition: all 0.6s;
+}
+
+.whatsappIcon img:hover {
+    transform: scale(1.5);
+}
+
+
+/* Le pongo color verde al footer y lo divido en 3 columnas usando flexbox */
+footer {
+    background-color: #A0C672;
+    padding: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20%;
+    background-image: url(../img/fondoClaro.png);
+}
+
+/* Los iconos de las redes sociales giran al pasarle el mouse por encima */
+.redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+.redes a img {
+    transition: all 0.6s;
+}
+
+.redes a img:hover {
+    transform: rotate(360deg);
+}
+
+
+@media only screen and (max-width:499px) {
+    html {
+        font-size: 45%;
+    }
+
+    main {
+        padding: 10px 3% 10px 3%;
+    }
+
+    .portada {
+        height: 150px;
+    }
+
+    .videoPortada {
+        height: 150px;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .menuSticky {
+        padding: 10px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 100px;
+        position: static;
+    }
+
+    .menuSticky a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 20px 20px 20px;
+        margin: 20px 0;
+        padding: 0;
+        grid-gap: 0px;
+    }
+
+    .navbar a img {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+
+    .presentationColumnas {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 400px;
+    }
+
+    .presentationColumnas img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mono {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width:500px) and (max-width:800px) {
+    html {
+        font-size: 55%;
+    }
+
+    main {
+        padding: 10px 10% 10px 10%;
+    }
+
+    .portada {
+        height: 300px;
+    }
+
+    .videoPortada {
+        height: 300px;
+    }
+
+    .navbar {
+        grid-gap: 0px;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .menuSticky {
+        padding: 10px 10%;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 90px;
+    }
+
+    .menuSticky a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 20px 20px 20px;
+        margin: 20px 0;
+    }
+
+    .presentationColumnas {
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px 300px;
+    }
+
+    .presentationColumnas img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .mono {
+        display: none;
+    }
+}

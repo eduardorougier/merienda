@@ -1,0 +1,193 @@
+/* Le puse margen al main para que tenga un poco más de forma de página web */
+main {
+    padding: 30px 20% 50px 20%;
+}
+
+
+/* Le pongo sombra a todas las imágenes dentro del main */
+main img {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+}
+
+
+@import "_animated";
+
+
+/* Redondeo todas las esquinas de todas las imagenes del sitio y ajusto el ancho al 100% */
+.contenido img {
+    border-radius: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+/* Formato H2 - margin + padding */
+.contenido h2 {
+    margin: 20px 0 10px 0;
+    padding: 0 30px;
+}
+
+
+/* Formato H3 - margin + padding */
+.contenido h3 {
+    font-weight: bold;
+    padding:  0 30px;
+}
+
+
+/* Formato H4 - margin + padding */
+.contenido h4 {
+    font-weight: bold;
+    padding: 0 30px 10px 30px;
+}
+
+
+.contenido p {
+    margin: 0 0 10px 0;
+    padding: 0 30px;
+}
+
+
+/* Formato OL + estilo de lista */
+.contenido ol {
+    margin: 0 0 50px 0;
+    list-style-type: symbols();
+}
+
+
+/* En varias partes del sitio hay citas que comparten fuente, color, tamaño, están alineadas al centro y tienen margen arriba y abajo */
+.quotes {
+    color: #9FCDBE;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* En la pagina de presentación se crean dos recuadros de color donde aparece la info de cada socia. */
+.presentation {
+    padding: 40px 70px 10px 70px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Divido internamente cada sección de presentación en dos columnas usando display:grid */
+.presentationColumnas {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentationColumnas img {
+    width: 100%;
+}
+
+.presentationColumnas div {
+    padding: 5%;
+}
+
+/* Cada ficha tiene un color de fondo particular*/ 
+.presentation1 {
+    background-color: #F9D953;
+    background-image: url("../img/fondoClaro.png");
+}
+
+
+/* Cada ficha tiene un color de fondo particular */
+.presentation2 {
+    background-color: #A0C672;
+    background-image: url("../img/fondoClaro.png");
+}
+
+
+/* Redondeo bordes imagenes presentación y ajusto el ancho */
+.presentation img {
+    border-radius: 50%;
+    width: 100x;
+}
+
+/* Las citas de estos bloques tienen una clase individual para cambiarles el color y que contrasten bien con el fondo*/
+.presentation1 .aboutQuote {
+    color: #EE988F;
+    text-align: right;
+}
+
+
+.presentation2 .aboutQuote {
+    color: #F9D953;
+    text-align: right;
+}
+
+
+/* Divido las novedades en 3 columnas usando flexbox*/
+.contenedorNovedades {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
+/* Redondeo bordes de imagenes y ajusto al 100% del ancho de la caja padre. Le doy un borde de color diferente a cada novedad */
+.contenedorNovedades img {
+    border-radius: 30px;
+    width: 100%;
+}
+
+.novedad {
+    flex-basis: 32%;
+    text-align: center;
+
+    h3 {
+        padding: 5px;
+    }
+
+    p{
+        padding: 5px;
+    }
+}
+
+
+/* Las imagenes con las novedades crecen al pasarle el mouse por arriba */
+.novedad img {
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.novedad img:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+/* Cada cuadro de novedad tiene un borde de distito color siguiendo la paleta que armamos junto con la identidad. Uso un mixin con tres parámetro para que sea mas corto y sencillo el código. El color lo traigo del mapa correspondiente */
+.novedad1 img{
+    @include novedadBordes(6px,solid,map-get($coloresMerienda, rosa));
+}
+
+.novedad2 img{
+    @include novedadBordes(6px,solid,map-get($coloresMerienda, verde));
+}
+
+.novedad3 img{
+    @include novedadBordes(6px,solid,map-get($coloresMerienda, amarillo));
+}
+
+/* Formato de elementos de columnas novedades */
+.columnasNovedades div h3 {
+    padding: 0 30px;
+}
+
+
+.columnasNovedades div p {
+    padding: 0 30px;
+}

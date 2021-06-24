@@ -1,0 +1,116 @@
+/* Le saco los bullets a la lista */
+nav ul li{
+    list-style: none;
+}
+
+
+/* A los enlaces de la barra de navegación le saco el subrayado y le asigno color y negrita */
+nav ul li a{
+    text-decoration: none;
+    color: #EE988F;
+    font-weight: bold;
+}
+
+/*Quiero que la barra de navegacón quede siempre visible pegada al borde superior de la página. Divido el menú en dos columnas usando display:grid */
+.menuSticky {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 1fr 2fr ;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    /* No creo que un degradado quede bien con la estética del sitio, por eso puse un degradado de blanco a blanco para que puedan evaluar como uso la herramienta */
+    background-image: linear-gradient(to bottom, white, white);
+    padding: 15px 20%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    z-index: 15;
+}
+
+
+/*Ajusto la altura del logo en el header */
+.logoHeader {
+    height: 40px;
+}
+
+
+/* Le asigno display:grid a la ul del menuSticky para divirlo en 4 columnas de ancho automático */
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 5px;
+    grid-gap: 15px;
+}
+
+
+/* Centro el texto de cada botón de la barra de navegación */
+.navbar li {
+    text-align: center;
+}
+
+
+/* Cómo la navbar es siempre la misma, el enlace a la página actual aparece en otro color */
+.seleccionado {
+    color: #9FCDBE;
+}
+
+
+/* Los botones de la navbar cambian de color cuando le pasamos el mouse por encima */
+nav ul li:hover{
+    background-color: #F9D953;
+    border-radius: 5px;
+}
+
+
+nav ul li a:hover{
+    color: white;
+}
+
+
+@import "_emergente";
+
+
+// Creo un extend para propiedades repetidas
+%videoProperties {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Para que el video ocupe todo el ancho de la pantalla y que se ajuste la altura automaticamente. Uso 100vh para la altura, de esa manera se ajusta a la altura de la pantalla */
+.portada {
+    @extend %videoProperties;
+}
+
+
+/* Propiedades del video que se ajustan a su caja .portada */
+.videoPortada {
+    @extend %videoProperties;
+}
+
+
+/* para que el logo y la imagen queden arriba del video con posicion absoluta, que se separe del lateral izquiedo y tenga un fondo negro semi transparente con bordes derechos redondeados */
+.content {
+    position: relative;
+    top: -450px;
+    width: 40%;
+    padding: 25px 25px 30px 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 0;
+}
+
+.fondoNegroTransparente {
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+
+/* achico un poco el logo que va sobre el video. Uso una variable para poder modificar más facilmente el ancho y alto del logo que está sobre el video*/
+.content img {
+    width: $anchoVideoPrincipal;
+    height: $altoVideoPrincipal;
+    padding-left: 25%;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+//Creo un mixin para controlar los bordes
+@mixin novedadBordes($grosor, $tipo, $color) {
+    border: $grosor $tipo $color;
+}
+
+
+//Mixin condicional para decidir si mostrar o no la animación del mono
+@mixin mostrarMono($display) {
+    @if $display == none {
+        display: none;
+    } else {
+        display: block;
+    }
+}
