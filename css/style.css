@@ -112,13 +112,18 @@ nav ul li a:hover {
 }
 
 /* Fin submenu emergente */
-.videoPortada, .portada {
-  width: 100%;
+/* Para que el video ocupe todo el ancho de la pantalla y que se ajuste la altura automaticamente. Uso 100vh para la altura, de esa manera se ajusta a la altura de la pantalla */
+.portada {
   height: 100vh;
+  overflow: hidden;
 }
 
-/* Para que el video ocupe todo el ancho de la pantalla y que se ajuste la altura automaticamente. Uso 100vh para la altura, de esa manera se ajusta a la altura de la pantalla */
 /* Propiedades del video que se ajustan a su caja .portada */
+.videoPortada {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 /* para que el logo y la imagen queden arriba del video con posicion absoluta, que se separe del lateral izquiedo y tenga un fondo negro semi transparente con bordes derechos redondeados */
 .content {
   position: relative;
@@ -490,12 +495,9 @@ footer {
     padding: 10px 3% 10px 3%;
   }
 
-  .portada {
-    height: 150px;
-  }
-
   .videoPortada {
-    height: 150px;
+    position: relative;
+    right: 75%;
   }
 
   .content {
@@ -554,12 +556,9 @@ footer {
     padding: 10px 10% 10px 10%;
   }
 
-  .portada {
-    height: 300px;
-  }
-
   .videoPortada {
-    height: 300px;
+    position: relative;
+    right: 50%;
   }
 
   .navbar {

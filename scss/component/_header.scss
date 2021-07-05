@@ -1,3 +1,5 @@
+
+
 /* Le saco los bullets a la lista */
 nav ul li{
     list-style: none;
@@ -71,21 +73,24 @@ nav ul li a:hover{
 @import "_emergente";
 
 
-// Creo un extend para propiedades repetidas
-%videoProperties {
-    width: 100%;
-    height: 100vh;
-}
+// // Creo un extend para propiedades repetidas
+// %videoProperties {
+//     // width: 100%;
+// }
 
 /* Para que el video ocupe todo el ancho de la pantalla y que se ajuste la altura automaticamente. Uso 100vh para la altura, de esa manera se ajusta a la altura de la pantalla */
 .portada {
-    @extend %videoProperties;
+    // @extend %videoProperties;
+    height: 100vh;
+    overflow: hidden;
 }
 
 
 /* Propiedades del video que se ajustan a su caja .portada */
 .videoPortada {
-    @extend %videoProperties;
+    // @extend %videoProperties;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 

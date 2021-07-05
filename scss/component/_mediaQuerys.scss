@@ -7,12 +7,13 @@
         padding: 10px 3% 10px 3%;
     }
 
-    .portada {
-        height: 150px;
-    }
+    // .portada {
+    //     height: 150px;
+    // }
 
     .videoPortada {
-        height: 150px;
+        position: relative;
+        right: 75%;
     }
 
     .content {
@@ -70,12 +71,13 @@
         padding: 10px 10% 10px 10%;
     }
 
-    .portada {
-        height: 300px;
-    }
+    // .portada {
+    //     height: 300px;
+    // }
 
     .videoPortada {
-        height: 300px;
+        position: relative;
+        right: 50%;
     }
 
     .navbar {
