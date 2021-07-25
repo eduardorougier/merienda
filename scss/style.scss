@@ -9,7 +9,7 @@
 
 /* Voy a usar rem como unidad de medida relativa. Establezco el tamaño de letra del html en 62.5% */
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; 
 }
 
 
@@ -31,7 +31,7 @@ h2 {
 }
 
 
-// Importo los diferentes comonentes
+// Importo los diferentes componentes
 @import "base/_variables.scss";
 @import "base/_mixin.scss";
 @import "base/_mapas.scss";
@@ -40,4 +40,5 @@ h2 {
 @import "component/_footer";
 @import "component/_whatsapp";
 @import "component/_mediaQuerys";
+@import "component/_cuatroCeroCuatro"
 

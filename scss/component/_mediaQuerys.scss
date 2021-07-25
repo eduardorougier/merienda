@@ -1,3 +1,7 @@
+/* Creo los media querys para tres situaciones diferentes, maximo 499px de ancho, entre 500 y 800 y más de 800 */
+
+
+
 @media only screen and (max-width:499px) {
     html {
         font-size: 45%;
@@ -7,16 +11,15 @@
         padding: 10px 3% 10px 3%;
     }
 
-    // .portada {
-    //     height: 150px;
-    // }
-
-    .videoPortada {
-        position: relative;
-        right: 75%;
+    .portada {
+        height: 150px;
     }
 
-    .content {
+    .videoPortada {
+        height: 150px;
+    }
+
+    .content, .flechaAbajo{
         display: none;
     }
 
@@ -71,20 +74,19 @@
         padding: 10px 10% 10px 10%;
     }
 
-    // .portada {
-    //     height: 300px;
-    // }
+    .portada {
+        height: 300px;
+    }
 
     .videoPortada {
-        position: relative;
-        right: 50%;
+        height: 300px;
     }
 
     .navbar {
         grid-gap: 0px;
     }
 
-    .content {
+    .content, .flechaAbajo {
         display: none;
     }
 
