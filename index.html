@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=5.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="merienda es un club de lectura para niños. Todos los meses te mandamamos dos libros y una sorpresa para que disfrutes. Conocenos...">
+    <meta name="keywords"
+        content="club de lectura, libros para niños, suscripcion libros, libros, lectura, niños, infancia, literatura para niños, merienda">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//  ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Link hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link Google Fonts: QUICKSAND Light, regular, medium, bold -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Protocolo Open Graph -->
+    <meta property="og:title" content="merienda - Club de libros">
+    <meta property="og:author" content="merienda by Eduar">
+    <meta property="og:description"
+        content="club de lectura, libros para niños, suscripcion libros, libros, lectura, niños, infancia, literatura para niños, merienda">
+
+    <title>merienda - Club de Libros</title>
+
+</head>
+
+<body>
+
+    <!-- PRINCIPIO HEADER. Solo en el index, video presentación a pantalla completa con logo y slogan por encima y debajo un área navegable con 5 botones. Sobre el video también se incluye un caracter animado que indica que hay contenido más abajo. -->
+    <header>
+        <!-- VIDEO DE FONDO. Video con clase "portada". Por encima va el logo de la marca y un slogan en el div con clase "content". -->
+        <section class="portada">
+            <video src="video/prueba.mp4" autoplay muted loop class="videoPortada">
+            </video>
+            <div class="content">
+                <img src="img/m.png" alt="Logo merienda club de libros" loading=”lazy”>
+                <h2>"La merienda es un momento,<br>pero también es un estado del corazón"</h2>
+            </div>
+        </section>
+        <!-- Flechita para indicar que hay más contenido debajo del video -->
+        <section class="flechaAbajo">
+            <h2><</h2>
+        </section>
+
+    </header>
+    <!-- FIN HEADER -->
+
+    <!-- NAV BAR -->
+    <nav class="menuSticky">
+        <!-- Logo -->
+        <a href="index.html"><img src="img/merienda.png" alt="logo merienda club de libros" class="logoHeader"
+                loading=”lazy”></a>
+
+        <ul class="navbar">
+            <li><a href="html/sistema.html">¿Cómo funciona?</a></li>
+            <li><a href="html/about.html">¿Quienes somos?</a></li>
+            <li><a href="html/novedades.html">Novedades</a></li>
+            <!-- Menú desplegable con enlaces externos a distintas plataformas de e-commerce -->
+            <li class="contenedorSubmenu">
+                <a href="">Tienda</a>
+                <ul class="submenu">
+                    <li class="submenuItem"><a href="http://www.tiendanube.com" target="_blank" rel="noopener">Nube</a></li>
+                    <li class="submenuItem"><a href="http://www.mercadolibre.com.ar" target="_blank" rel="noopener">Mercado</a></li>
+                    <!-- Con este botón simulamos una carga fallida y msj de error 404 -->
+                    <li class="submenuItem"><a href="html/estamos-trabajando.html" target="_blank" rel="noopener">mPlace</a></li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+    <!-- /NAV BAR -->
+
+
+    <!-- Botón de Whatsapp. Aparece debajo del video y queda pegado en la parte inferior derecha de la pantalla. -->
+    <a href="https://api.whatsapp.com/send?phone=1112345678&text=hola,%20¿qué%20tal%20estás?" target="_blank" class="whatsappIconIndex" rel="noopener"><img src="img/whatsapp.png" alt="Icono whasapp" loading=”lazy” ></a>
+
+
+    <!-- INICIO MAIN -->
+    <main>
+        
+        <section class="contenido">
+
+            <p>La hora de la merienda nos remite a reunirnos con amigos después del cole, a sacarnos los zapatos de todo el día, a llegar a casa,  a comer algo esperando ver los dibus, a ese ratito antes de hacer la tarea. </p>
+            <p>Nos remite a un abuelo contándonos una historia, haciendo tiempo hasta que mamá o papá lleguen del trabajo o de hacer las compras.</p>
+
+            <img src="img/sentimientos4.jpg" alt="Imagen de familia compartiendo un libro del club de libros merienda"
+                loading=”lazy”>
+
+            <p>Merienda es el momento de la niñez, por excelencia. Donde todo es posible, disparando la imaginación, llamando alguna historia, algún cuento, algún personaje de algún libro que nos han leído desde la panza.</p>
+
+            <p> Es crecer, es jugar, es leer. Es encontrar el momento distendido del día para ir ¿Por qué no? a la librería del barrio a encontrar ese libro que nos fascinará toda la semana, todo el mes, toda la vida.</p>
+
+            <h2 class="quotes">"La merienda es un momento, <br> pero también es un estado del corazón"</h2>
+        </section>
+
+        <section class="contenido">
+
+            <p>Merienda es un club de libros para chicos. Suscribiéndote a merienda recibís todos los meses en tu casa dos libros especialmente seleccionados para ellxs.</p>
+
+            <img src="img/sentimientos5.jpg" alt="Imagen de familia compartiendo un libro del club de libros merienda"
+                loading=”lazy”>
+
+            <p>Además, recibirán una pequeña sorpresa para los más peques, un pasaporte lector y stickers para ir completando mes a mes las lecturas compartidas y algunas actividades para realizar en familia.</p>
+
+            <h2 class="quotes">"Si quieres aventura, lánzate a la lectura"</h2>
+        </section>
+
+    </main>
+    <!-- FIN MAIN -->
+
+
+    <!-- INICIO FOOTER -->
+    <footer>
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="redes">
+            <a href="facebook.com"><img src="img/logoFacebook.png" alt="icono miniatura facebook" loading=”lazy”></a>
+            <a href="instagram.com"><img src="img/logoInstagram.png" alt="icono miniatura instagram" loading=”lazy”></a>
+        </div>
+        <!-- /COLUMNA IZQUIERDA -->
+
+
+        <!-- COLUMNA CENTRO -->
+        <div class="info">
+            <p>+54 11 1234 5678</p>
+            <p>info@merienda.com.ar</p>
+            <p>Todos los derechos reservados</p>
+            <p>design & coding by Eduar Rougier</p>
+        </div>
+        <!-- /COLUMNA CENTRO -->
+
+
+        <!-- COLUMNA DERECHA -->
+        <div class="recorteMapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.4163737125634!2d-58.43669475280399!3d-34.58309832767672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5926f3f2263%3A0x8a39e4eaae85f761!2sCoderhouse!5e0!3m2!1ses-419!2sar!4v1620423046380!5m2!1ses-419!2sar"
+                width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!-- /COLUMNA DERECHA -->
+    </footer>
+    <!-- FIN FOOTER -->
+
+   
+
+
+    <!-- Bootstrap JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

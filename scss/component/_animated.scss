@@ -1,0 +1,153 @@
+/* Cada imagen tiene su animación con los tiempos intercalados para que el mono aparezca desde distintas posiciones de la página. Tiene un position:fixed para poder ubicarlo en la parte de la página que corresponda y con translate se mueve para que aparezca. Con los diferentes valores de z-index hago que aparezca abajo del menu-sticky o arriba del footer */
+
+.curioso {
+    animation-name: jorge;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    top: -130px;
+    right: 10%;
+    z-index: -1;
+}
+
+.curioso2 {
+    animation-name: jorge2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    left: -160px;
+    bottom: 20%;
+    z-index: -1;
+}
+
+.curioso3 {
+    animation-name: jorge3;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    bottom: -170px;
+    left: 25%;
+    z-index: 10;
+}
+
+.curioso4 {
+    animation-name: jorge4;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: fixed;
+    right: -160px;
+    bottom: 50%;
+    z-index: -1;
+}
+
+@keyframes jorge {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    15% {
+        transform: translate(0, 0) ;
+    } 
+
+    18% {
+        transform: translate(0,170px)
+    }
+
+    22% {
+        transform: translate(0, 170px) ;
+    } 
+
+    25% {
+        transform: translate(0,0);
+    }
+
+    40% {
+        transform: translate(0, 0);
+    } 
+
+    44% {
+        transform: translate(140px,0);
+    }
+
+    48% {
+        transform: translate(140px, 0);
+    } 
+
+    50% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes jorge2 {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    40% {
+        transform: translate(0, 0) ;
+    } 
+
+    44% {
+        transform: translate(140px,0)
+    }
+
+    48% {
+        transform: translate(140px, 0) ;
+    } 
+
+    50% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes jorge3 {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    90% {
+        transform: translate(0, 0) ;
+    } 
+
+    93% {
+        transform: translate(0,-160px)
+    }
+
+    97% {
+        transform: translate(0, -160px) ;
+    } 
+
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes jorge4 {
+    0% {
+        transform: translate(0,0);
+    }   
+
+    65% {
+        transform: translate(0, 0) ;
+    } 
+
+    68% {
+        transform: translate(-140px,0)
+    }
+
+    72% {
+        transform: translate(-140px, 0) ;
+    } 
+
+    75% {
+        transform: translate(0,0);
+    }
+}
+
+.mono img{
+    box-shadow: 0 10px 20px rgba(0,0,0,0), 0 6px 6px rgba(0,0,0,0);
+}

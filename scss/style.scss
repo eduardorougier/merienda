@@ -1,0 +1,44 @@
+
+
+/* Voy a usar una única familia tipográfica */
+* {
+    font-family: 'Quicksand', sans-serif;
+    /* font-weight: normal; */
+}
+
+
+/* Voy a usar rem como unidad de medida relativa. Establezco el tamaño de letra del html en 62.5% */
+html {
+    font-size: 62.5%; 
+}
+
+
+/* Reseteo el body estableciendo algunas medidas en 0 y el tamaño de letra básico */
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.7rem;
+
+    /* Le pongo un png semi transparente con un pattern para el fondo del body */
+    background-image: url("../img/fondo.png");
+}
+
+/* Formato de H2. Traigo el color del mapa */
+h2 {
+    color: #EE988F;
+    font-weight: bold;
+    font-size: 3.2rem;
+}
+
+
+// Importo los diferentes componentes
+@import "base/_variables.scss";
+@import "base/_mixin.scss";
+@import "base/_mapas.scss";
+@import "component/_header";
+@import "component/_main";
+@import "component/_footer";
+@import "component/_whatsapp";
+@import "component/_mediaQuerys";
+@import "component/_cuatroCeroCuatro"
+

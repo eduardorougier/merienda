@@ -1,0 +1,123 @@
+/* Creo los media querys para tres situaciones diferentes, maximo 499px de ancho, entre 500 y 800 y más de 800 */
+
+
+
+@media only screen and (max-width:499px) {
+    html {
+        font-size: 45%;
+    }
+
+    main {
+        padding: 10px 3% 10px 3%;
+    }
+
+    .portada {
+        height: 150px;
+    }
+
+    .videoPortada {
+        height: 150px;
+    }
+
+    .content, .flechaAbajo{
+        display: none;
+    }
+
+    .menuSticky {
+        padding: 10px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 100px;
+        position: static;
+    }
+
+    .menuSticky a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 20px 20px 20px;
+        margin: 20px 0;
+        padding: 0;
+        grid-gap: 0px;
+    }
+
+    .navbar a img {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+
+    .presentationColumnas {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 400px;
+    }
+
+    .presentationColumnas img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mono {
+        @include mostrarMono(none);
+    }
+}
+
+
+@media only screen and (min-width:500px) and (max-width:800px) {
+    html {
+        font-size: 55%;
+    }
+
+    main {
+        padding: 10px 10% 10px 10%;
+    }
+
+    .portada {
+        height: 300px;
+    }
+
+    .videoPortada {
+        height: 300px;
+    }
+
+    .navbar {
+        grid-gap: 0px;
+    }
+
+    .content, .flechaAbajo {
+        display: none;
+    }
+
+    .menuSticky {
+        padding: 10px 10%;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 90px;
+    }
+
+    .menuSticky a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 20px 20px 20px;
+        margin: 20px 0;
+    }
+
+    .presentationColumnas {
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px 300px;
+    }
+
+    .presentationColumnas img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .mono {
+        @include mostrarMono(none);
+    }
+}
